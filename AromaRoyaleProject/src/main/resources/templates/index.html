@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aroma Royale</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#f5e6c8,#d4af37);
+}
+
+header{
+    background:#2c1810;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+nav{
+    margin-top:10px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+nav a:hover{
+    color:#d4af37;
+}
+
+.page-section{
+    display:none;
+    padding:60px 20px;
+    min-height:80vh;
+    text-align:center;
+}
+
+.active{
+    display:block;
+}
+
+.hero h1{
+    font-size:60px;
+    color:#2c1810;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:22px;
+}
+
+.products{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.card{
+    width:280px;
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.2);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+.card h3{
+    margin-top:15px;
+}
+
+.contact-form{
+    max-width:500px;
+    margin:auto;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.btn{
+    background:#2c1810;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.whatsapp-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px 20px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+    z-index:1000;
+    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+.whatsapp-btn:hover{
+    background:#1da851;
+}
+
+footer{
+    background:#2c1810;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Aroma Royale</h1>
+
+    <nav>
+        <a onclick="showSection('home')">Home</a>
+        <a onclick="showSection('collections')">Collections</a>
+        <a onclick="showSection('about')">About</a>
+        <a onclick="showSection('contact')">Contact</a>
+    </nav>
+</header>
+
+<!-- HOME -->
+
+<section id="home" class="page-section active hero">
+    <h1>Transforming Spaces Through Scent</h1>
+ 
+    <img src="../static/images/Logo_1.png"
+         alt="Aroma Royale Logo"
+         style="width:200px;max-width:75%;margin:20px 0;">
+    <p>
+        Experience elegance through our premium room fragrances collection.
+    </p>
+
+    <br><br>
+
+    <button class="btn"
+        onclick="showSection('collections')">
+        Shop Now
+    </button>
+</section>
+
+<!-- COLLECTIONS -->
+
+<section id="collections" class="page-section">
+
+    <h2>Our Collections</h2>
+
+    <br><br>
+
+    <div class="products">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=600"
+                 alt="Royal Oud">
+
+            <h3>Royal Oud</h3>
+
+            <p>Rich and sophisticated fragrance.</p>
+
+            <h4>₹2,999</h4>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=600"
+                 alt="Golden Essence">
+
+            <h3>Golden Essence</h3>
+
+            <p>Premium floral luxury perfume.</p>
+
+            <h4>₹2,499</h4>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=600"
+                 alt="Velvet Musk">
+
+            <h3>Velvet Musk</h3>
+
+            <p>Long-lasting elegant scent.</p>
+
+            <h4>₹1,999</h4>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about" class="page-section">
+
+    <h2>About Aroma Royale</h2>
+
+    <br>
+
+    <p style="max-width:900px;margin:auto;font-size:18px;line-height:1.8;">
+        Aroma Royale is a luxury fragrance brand dedicated to creating
+        premium perfumes using the world's finest ingredients.
+
+        Our mission is to provide unforgettable scents that elevate
+        confidence and leave a lasting impression.
+    </p>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="page-section">
+
+    <h2>Contact Us</h2>
+
+    <br>
+
+    <p><strong>Address:</strong> MG Road, New Delhi, India</p>
+
+    <p><strong>Phone:</strong> +91 98765 43210</p>
+
+    <p><strong>Email:</strong> info@aromaroyale.com</p>
+
+    <br><br>
+
+    <div class="contact-form">
+
+    <form action="https://formsubmit.co/your-email@gmail.com" method="POST">
+
+        <input type="text"
+               name="name"
+               placeholder="Your Name"
+               required>
+
+        <input type="email"
+               name="email"
+               placeholder="Your Email"
+               required>
+
+        <input type="tel"
+               name="phone"
+               placeholder="Your Phone Number"
+               pattern="[0-9]{10}"
+               required>
+
+        <textarea name="message"
+                  rows="5"
+                  placeholder="Your Message"
+                  required></textarea>
+
+        <button type="submit" class="btn">
+            Send Message
+        </button>
+
+    </form>
+
+</div>
+
+</section>
+
+<footer>
+    <p>&copy; 2026 Aroma Royale. All Rights Reserved.</p>
+</footer>
+
+<script>
+function showSection(sectionId){
+
+    let sections =
+        document.querySelectorAll('.page-section');
+
+    sections.forEach(function(section){
+        section.classList.remove('active');
+    });
+
+    document
+        .getElementById(sectionId)
+        .classList.add('active');
+}
+</script>
+
+<a href="https://wa.me/919876543210?text=Hello%20Aroma%20Royale"
+   class="whatsapp-btn"
+   target="_blank">
+   💬 Chat on WhatsApp
+</a>
+
+</body>
+</html>
